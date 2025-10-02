@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يُفتح قريبًا | مكتب علي خجوري</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #ffd91c;
+            --primary-dark: #1D4ED8;
+            --secondary-color: #1E293B;
+            --accent-color: #3B82F6;
+            --dark-color: #0F172A;
+            --light-color: #FFFFFF;
+            --text-color: #F1F5F9;
+            --text-secondary: #CBD5E1;
+            --background-dark: #0F172A;
+            --card-dark: #1E293B;
+        }
+        
+        body {
+            background: linear-gradient(360deg, #282828 75%, #13435a 100%, #282828 75% );
+            color: var(--text-color);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        .logo-container {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-image {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+            filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.5));
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .coming-soon-text {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #e8e8e8, #e3e3e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(63, 63, 63, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 100px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 205, 25, 0.3);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(77, 77, 77, 0.5);
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #ffd91c, #60A5FA);
+            width: 0%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .notify-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .email-input {
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            background: rgba(56, 56, 56, 0.7);
+            color: var(--text-color);
+            font-size: 1rem;
+            width: 300px;
+            max-width: 100%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            transition: all 0.3s;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+        
+        .notify-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            background: #d3b20b;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 230, 40, 0.4);
+        }
+        
+        .notify-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(255, 244, 28, 0.6);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(66, 66, 66, 0.7);
+            color: var(--primary-color);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+        }
+        
+        .social-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(252, 226, 32, 0.3);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgb(255, 217, 28, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-duration: 10s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            left: 80%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 20%;
+            left: 85%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+        
+        .floating-element:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 15%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(20px, 30px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+        
+        /* التكيف مع شاشات الموبايل */
+        @media (max-width: 768px) {
+            .coming-soon-text {
+                font-size: 2.5rem;
+            }
+            
+            .message {
+                font-size: 1.2rem;
+            }
+            
+            .countdown {
+                gap: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .notify-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .email-input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .logo-image {
+                max-width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 2rem;
+            }
+            
+            .coming-soon-text {
+                font-size: 4rem;
+                transform: translateY(-10px);
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 0.8rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .logo-image {
+               
+                scale: 0.8;
+                transform: translateY(500px);
+                margin-bottom: px;
+            }
+            .notify-btn{
+                transform: translateY(10px);
+            }
+            .progress-container{   
+                width: 90%;
+                transform: translateX(-19px);
+            }
+            .logo-container{
+                transform: translateY(-20px);
+            }
+        }
+        
+        
+        /* رسالة النجاح */
+        .success-message {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            color: #22C55E;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- العناصر العائمة للخلفية -->
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+    
+    <div class="container">
+        <!-- الشعار -->
+        <div class="logo-container">
+            <!-- استبدل "logo.png" باسم ملف الشعار الفعلي -->
+            <img src="logo.png" alt="شعار مكتب علي خجوري" class="logo-image">
+        </div>
+        
+        <!-- النص الرئيسي -->
+        <h1 class="coming-soon-text">يُفتح قريبًا</h1>
+        
+        <!-- الرسالة -->
+        <p class="message">نحن نعمل على شيء متميز! موقعنا الإلكتروني الجديد قيد الإنشاء وسنطلقه قريبًا.</p>
+        
+        <!-- العداد التنازلي -->
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">أيام</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">ساعات</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">دقائق</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">ثواني</span>
+            </div>
+        </div>
+        
+        <!-- شريط التقدم -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="progress-text">نسبة الإنجاز: <span id="progress-percent">0%</span></p>
+        
+        <!-- نموذج الإشعار -->
+        <div class="notify-form">
+            <input type="email" class="email-input" placeholder="أدخل بريدك الإلكتروني للإشعار" id="email-input">
+            <button class="notify-btn" id="notify-btn">أخبرني عند الإطلاق</button>
+        </div>
+        <div class="success-message" id="success-message">شكرًا لك! سنقوم بإعلامك عند إطلاق الموقع.</div>
+        
+        <!-- روابط التواصل الاجتماعي -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/ali_khajouri_?utm_source=ig_web_button_share_sheet&igsh=MWhtMGx4YzY5ODE4bQ==" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ALI.EI0" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@alikhagore?is_from_webapp=1&sender_device=pc" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/9647739391232" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // عداد تنازلي (تم التحديث إلى 1 نوفمبر)
+        const countDownDate = new Date("Nov 1, 2025 00:00:00").getTime();
+        // تاريخ البدء (افتراضيًا 1 أكتوبر)
+        const startDate = new Date("Sep 1, 2025 00:00:00").getTime();
+        
+        // دالة تحديث العداد وشريط التقدم
+        const updateCountdown = function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            const totalDuration = countDownDate - startDate;
+            const elapsed = now - startDate;
+            
+            // حساب النسبة المئوية للتقدم
+            let percentage = (elapsed / totalDuration) * 100;
+            if (percentage < 0) percentage = 0;
+            if (percentage > 100) percentage = 100;
+            
+            // تحديث شريط التقدم
+            document.getElementById("progress-bar").style.width = percentage + "%";
+            document.getElementById("progress-percent").textContent = Math.round(percentage) + "%";
+            
+            // حساب الأيام، الساعات، الدقائق والثواني
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // عرض النتائج
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            
+            // إذا انتهى العد التنازلي
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                document.querySelector(".coming-soon-text").innerHTML = "تم الإطلاق!";
+                document.getElementById("progress-bar").style.width = "100%";
+                document.getElementById("progress-percent").textContent = "100%";
+            }
+        };
+        
+        // تحديث فوري عند التحميل
+        updateCountdown();
+        
+        // ثم التحديث كل ثانية
+        const countdownFunction = setInterval(updateCountdown, 1000);
+       
+           
+        // معالجة نموذج الإشعار
+        document.getElementById('notify-btn').addEventListener('click', function() {
+            const email = document.getElementById('email-input').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && emailRegex.test(email)) {
+                // إرسال البريد الإلكتروني إلى الخادم
+                saveEmail(email);
+            } else {
+                alert('يرجى إدخال بريد إلكتروني صحيح');
+            }
+        });
+        
+ 
+        
+        // السماح بإرسال النموذج بالضغط على Enter
+        document.getElementById('email-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('notify-btn').click();
+            }
+        });
+        
+    </script>
+</body>
+</html>
