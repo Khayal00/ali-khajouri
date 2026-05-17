@@ -2615,7 +2615,7 @@
             const loader = document.getElementById('pageLoader');
             setTimeout(function() {
                 loader.classList.add('hidden');
-            }, 10);
+            }, 15);
         });
 
         // تحديث السنة الحالية في التذييل
@@ -2814,7 +2814,7 @@
             formMessage.textContent = 'جاري إرسال رسالتك...';
             formMessage.className = 'form-message success';
 
-            emailjs.sendForm('service_l3bvrya', 'template_782aq3w', this)
+            emailjs.sendForm('service_lrxtiyt', 'template_mtkvnrf', this)
             .then(() => {
                 formMessage.textContent = 'تم إرسال الرسالة بنجاح!';
                 contactForm.reset();
