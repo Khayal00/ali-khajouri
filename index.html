@@ -2043,10 +2043,7 @@
 <body>
     
    
-    <!-- Loader -->
-    <div class="loader" id="pageLoader">
-        <div class="loader-spinner"></div>
-    </div>
+  >
 
     <!-- شريط القوائم -->
     <header id="navbar">
@@ -2610,13 +2607,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
-        // Loader لإظهار مؤشر التحميل
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('pageLoader');
-            setTimeout(function() {
-                loader.classList.add('hidden');
-            }, 1000);
-        });
+      
 
         // تحديث السنة الحالية في التذييل
         document.getElementById('currentYear').textContent = new Date().getFullYear();
