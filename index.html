@@ -2043,13 +2043,16 @@
 <body>
     
    
-  >
+    <!-- Loader -->
+    <div class="loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
 
     <!-- شريط القوائم -->
     <header id="navbar">
         <div class="container">
             <nav class="navbar">
-                <a href="alikhajouri.com" class="logo"><img src="logo.png" alt="شعار الشركة" class="logo-image"><p>علي خجوري<br><span class="spaine">لأعمال التنفيذ الهندسي</span></p>
+                <a href="https://alikhajouri.com" class="logo"><img src="logo.png" alt="شعار الشركة" class="logo-image"><p>علي خجوري<br><span class="spaine">لأعمال التنفيذ الهندسي</span></p>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#" id="home-link" class="active">الرئيسية</a></li>
@@ -2607,7 +2610,13 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
-      
+        // Loader لإظهار مؤشر التحميل
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('pageLoader');
+            setTimeout(function() {
+                loader.classList.add('hidden');
+            }, 100);
+        });
 
         // تحديث السنة الحالية في التذييل
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -2793,7 +2802,7 @@
         });
         
         (function(){
-        emailjs.init("6Q8fs1KPlBB2oZQfT"); // ضع مفتاحك العام هنا
+        emailjs.init("ChMudnUfY1wFJHBSX"); // ضع مفتاحك العام هنا
         })();
 
         const contactForm = document.getElementById('contactForm');
@@ -2805,7 +2814,7 @@
             formMessage.textContent = 'جاري إرسال رسالتك...';
             formMessage.className = 'form-message success';
 
-            emailjs.sendForm('service_mchkc4g', 'template_gdu87to', this)
+            emailjs.sendForm('service_l3bvrya', 'template_782aq3w', this)
             .then(() => {
                 formMessage.textContent = 'تم إرسال الرسالة بنجاح!';
                 contactForm.reset();
